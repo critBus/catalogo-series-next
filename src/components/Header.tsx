@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaSearchengin } from "react-icons/fa";
 
 const Header = () => (
   <header className="bg-gradient-to-r from-red-600 to-orange-700 text-white p-6 shadow-lg rounded-b-lg">
@@ -8,8 +9,8 @@ const Header = () => (
       <Image
         src="/img/banner2_series.webp"
         alt="Banner del Catálogo de Series"
-        width={48}
-        height={48}
+        width={1024}
+        height={500}
         className="w-full h-auto object-cover rounded-lg"
       />
     </div>
@@ -19,8 +20,8 @@ const Header = () => (
           <Image
             src="/img/logo-rogerseries.png"
             alt="Rogerseries Logo"
-            width={48}
-            height={48}
+            width={300}
+            height={300}
             className="w-12 h-12 mr-4"
           />
           <h1 className="text-4xl font-extrabold">Rogerseries</h1>
@@ -79,7 +80,15 @@ const Header = () => (
                 className="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 transition duration-300 ml-2"
                 aria-label="Search"
               >
-                <i className="fas fa-search"></i>
+                <FaSearchengin className="w-8 h-8" />
+                {/* <Image
+                  src="/icons/heroicons--magnifying-glass.svg"
+                  width={400}
+                  height={400}
+                  className="w-8 h-8 text-white"
+                  alt="El icono"
+                ></Image> */}
+                {/* <i className="fas fa-search"></i> */}
               </button>
             </div>
           </li>
