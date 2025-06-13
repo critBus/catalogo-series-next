@@ -1,0 +1,67 @@
+ /* Style for the mobile menu */
+ .nav-links.active {
+    display: flex;
+}
+/* Slider specific styles */
+.slider-container {
+    overflow: hidden; /* Hide overflowing cards */
+    position: relative; /* For absolute positioning of navigation buttons */
+}
+
+.slider-wrapper {
+    display: flex; /* Arrange cards in a row */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+.slider-card {
+    min-width: 100%; /* Default: 1 card per view for extra small screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    padding: 0 1rem; /* Add some padding around the cards */
+    display: flex; /* Use flexbox to center content horizontally */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Adjust card width for different screen sizes */
+@media (min-width: 640px) { /* sm breakpoint */
+    .slider-card {
+        min-width: 50%; /* Show 2 cards on small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .slider-card {
+        min-width: 50%; /* Show 2 cards on medium screens and larger */
+    }
+}
+
+/* Navigation button styles */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 165, 0, 0.8); /* Changed to orange with opacity */
+    color: white;
+    padding: 0.75rem 0.5rem;
+    border-radius: 9999px; /* Full rounded corners */
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the cards */
+    transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: rgba(255, 140, 0, 1); /* Darker orange on hover */
+}
+
+.slider-button.left {
+    left: 0.5rem;
+}
+
+.slider-button.right {
+    right: 0.5rem;
+}
+
+.slider-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
